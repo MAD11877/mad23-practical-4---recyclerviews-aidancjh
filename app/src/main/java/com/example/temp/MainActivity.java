@@ -16,9 +16,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Intent intent = getIntent();
-        int randomnumber = intent.getIntExtra("random_integer",0);
+        String userName = intent.getStringExtra("userName");
+
         TextView tv = findViewById(R.id.textView2);
-        tv.setText("MAD " + randomnumber);
+        tv.setText(userName);
 
         // Get the button by its ID
         final Button myButton = (Button) findViewById(R.id.follow);
